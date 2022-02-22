@@ -1,0 +1,232 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>MPI笔记 &mdash; Recent notes 1.1.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="禅与摩托车维修艺术" href="%E7%A6%85%E4%B8%8E%E6%91%A9%E6%89%98%E8%BD%A6%E7%BB%B4%E4%BF%AE%E8%89%BA%E6%9C%AF%E6%91%98%E6%8A%84.html" />
+    <link rel="prev" title="编译库笔记" href="%E7%BC%96%E8%AF%91%E5%BA%93%E7%AC%94%E8%AE%B0.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Recent notes
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sphinx%E7%AC%94%E8%AE%B0.html">sphinx笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E7%BC%96%E8%AF%91%E5%BA%93%E7%AC%94%E8%AE%B0.html">编译库笔记</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">MPI笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E7%A6%85%E4%B8%8E%E6%91%A9%E6%89%98%E8%BD%A6%E7%BB%B4%E4%BF%AE%E8%89%BA%E6%9C%AF%E6%91%98%E6%8A%84.html">禅与摩托车维修艺术</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Recent notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>MPI笔记</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/MPI笔记.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="mpi">
+<h1>MPI笔记<a class="headerlink" href="#mpi" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>MPI是一个标准，而非一门语言</p></li>
+<li><p>API 应用程序接口</p></li>
+<li><p>进程、消息传输、发送与接受、同步与异步、通讯域</p></li>
+<li><p>MPI_Init 初始化</p></li>
+<li><p>MPI_Comm_world 默认通行域</p></li>
+<li><p>MPI_Comm_rank  获得进程序号</p></li>
+<li><p>MPI_Comm_size  通行域中的总进程数</p></li>
+<li><p>MPI_Finalize 清除MPI环境</p></li>
+<li><p>which mpi（显示路径，检查安装）</p></li>
+<li><p>编译
+mpif90 （gun）
+mpiifort   （intel）</p></li>
+<li><p>运行
+mpirun -np 进程数</p></li>
+<li><p>阻塞与非阻塞</p></li>
+<li><p>点对点 多对多通讯</p></li>
+<li><p>scatter 分发 gather 集合  reduce 规约</p></li>
+<li><p>Allgather 多对多</p></li>
+<li><p>wtime</p></li>
+<li><p>并发 单个cpu处理多个线程 ，并行 多个cpu，同一时刻在多个cpu上并发</p></li>
+<li><p>mpi 粗粒度级别 openmp 细粒度级别</p></li>
+</ul>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="%E7%A6%85%E4%B8%8E%E6%91%A9%E6%89%98%E8%BD%A6%E7%BB%B4%E4%BF%AE%E8%89%BA%E6%9C%AF%E6%91%98%E6%8A%84.html" class="btn btn-neutral float-right" title="禅与摩托车维修艺术" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="%E7%BC%96%E8%AF%91%E5%BA%93%E7%AC%94%E8%AE%B0.html" class="btn btn-neutral float-left" title="编译库笔记" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, TG
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
